@@ -3,32 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ventas trimestrales</title>
 </head>
 <body>
     <table>
+        <caption>Ventas trimestrales de la tienda</caption>
         <thead>
             <tr>
-            <th scope="col">Producto</th>
-            <th scope="col">Precio</th>
-            <th scope="col">Stock</th>
+                <th scope="col" rowspan="2">Categoría</th>
+                <th scope="col" colspan="2">2024</th>
+                <th scope="col" colspan="2">2025</th>
+            </tr>
+            <tr>
+                <td>Q1,Q2</td>
+                <td>Q1,Q2</td>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <th scope="row">Camiseta</th>
-                <td>19.99€</td>
-                <td>45</td>
+                <th scope="row">Camisetas</th>
+                <td>10</td>
+                <td>20</td>
             </tr>
             <tr>
-                <th scope="row">Pantalón</th>
-                <td>39.99€</td>
-                <td>12</td>
+                <th scope="row">Zapatillas</th>
+                <td>11</td>
+                <td>22</td>
+            </tr>
+            <tr>
+                <th scope="row">Accesorios</th>
+                <td>13</td>
+                <td>24</td>
             </tr>
         </tbody>
         <tfoot>
             <tr>
-                <td colspan="3">Precios con IVA incluido</td>
+                <td colspan="3">Cifras en miles de euros</td>
             </tr>
         </tfoot>
     </table>
