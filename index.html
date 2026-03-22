@@ -3,24 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Media.html</title>
 </head>
 <body>
-    <picture>
-    <source srcset="galeria/foto.webp" type="image/webp">
-    <source srcset="galeria/foto.avif" type="image/avif">
-    <img
-    src="/foto.jpg"
-    alt="alt de la fotunga"
-    width="800"
-    height="600"
-    loading="lazy"
-    >
-    </picture>
 
-    <figure>
-    <img src="galeria/retrato.jpg" alt="retrato de pintura" loading="lazy">
-    <figcaption>Retrato del autor en su estudio.</figcaption>
-    </figure>
+    <section>
+        <h2>Video</h2>
+    <video controls poster="poster.jpg" width="800" height="600" loading="lazy">
+    <source src="video.webm" type="video/webm">
+    <source src="video.mp4" type="video/mp4">
+
+    <track
+    label="spanish"
+    kind="subtitles"
+    default
+    srclang="es"
+    src="subs-es.vtt">
+
+    <track
+    label="english"
+    kind="subtitles"
+    srclang="en-EN"
+    src="subs-eng.vtt"
+    >
+    </video>
+    </section>
+
+    <section>
+        <h2>Audio</h2>
+    <audio controls>
+    <source src="audio.ogg" type="audio/ogg">
+    <source src="audio.mp3" type="audio/mp3">
+
+    <p>Si no puedes escucharlo, <a href="/audio.mp3">descarga el audio aquí</a></p>
+    </audio>
+    </section>
+
 </body>
 </html>
