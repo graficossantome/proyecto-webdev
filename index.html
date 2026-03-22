@@ -6,43 +6,35 @@
     <title>Document</title>
 </head>
 <body>
-
-<form action="https://ejemplo.com/inscripcion" method="post">
+    <form action="/contacto" method="GET">
 
     <label for="nombre">Nombre completo</label>
     <input type="text" name="nombre" id="nombre" required>
 
-    <label for="email">Tu correo electrónico</label>
-    <input type="email" name="email" id="email" required>
-
-    <label for="phone">Tu número de teléfono</label>
-    <input type="tel" name="phone" id="phone" required>
+    <label for="mensaje">Tu mensaje</label>
+    <textarea name="mensaje" id="mensaje" rows="2" cols="2" placeholder="Dinos qué opinas"></textarea>
 
     <fieldset>
-        <legend>Nivel de experiencia</legend>
+        <legend>¿Cómo prefieres que te contactemos?</legend>
         <label>
-            <input type="radio" name="nivel" id="principiante" value="principiante" required> principiante
+            <input type="radio" name="contacto" value="email"> Email
         </label>
         <label>
-            <input type="radio" name="nivel" id="intermedio" value="intermedio"> intermedio
+            <input type="radio" name="contacto" value="telefono"> Teléfono
         </label>
         <label>
-            <input type="radio" name="nivel" id="avanzado" value="avanzado"> avanzado
+            <input type="radio" name="contacto" value="whatsapp"> WhatsApp
         </label>
     </fieldset>
 
-    <label for="horario">Selecciona tu horario</label>
-    <select name="horario" id="horario">
-        <option value="mañana">Mañana (9:00-12:00)</option>
-        <option value="tarde">Tarde (16:00-19:00)</option>
-        <option value="noche">Noche (20:00-22:00)</option>
+    <label for="asunto">Asunto</label>
+    <select id="asunto">
+        <option value="consulta">Consulta general</option>
+        <option value="soporte">Soporte técnico</option>
+        <option value="presupuesto">Solicitar presupuesto</option>
     </select>
 
-    <label for="comentarios">Comentarios adicionales</label>
-    <textarea name="comentarios" id="comentarios" rows="2" cols="10" placeholder="Desembucha, bravucón"></textarea>
-
-    <button type="submit">DALE</button>
+    <button type="submit">Enviar</button>
 </form>
-
 </body>
 </html>
