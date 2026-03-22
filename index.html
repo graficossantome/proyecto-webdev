@@ -1,23 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    <form action="/subir-avatar" method="post" enctype="multipart/form-data">
-
-    <label for="avatar">Sube tu foto de perfil:</label>
-    <input type="file" id="avatar" name="avatar" accept="image/*" capture="user">
-
-    <label for="bio">Bio breve (máximo 150 caracteres):</label>
-    <textarea id="bio" name="bio" maxlength="150"></textarea>
-
-    <label for="edad">Edad:</label>
-    <input type="number" id="edad" name="edad" min="18" max="120" step="1">
-
-    <button type="submit">Guardar perfil</button>
-</form>
+    <table>
+        <caption>Datos</caption>
+        <thead>
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Email</th>
+                <th scope="col">Teléfono</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Ana García</th>
+                <td>ana@mail.com</td>
+                <td>612345678</td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>
