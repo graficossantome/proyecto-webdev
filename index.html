@@ -5,26 +5,28 @@
   <title>Mi Blog de Viajes</title>
 </head>
 <body>
-  <div class="cabecera">
+  <header>
     <h1>Mi Blog de Viajes</h1>
-    <div class="navegacion">
-      <a href="/">Inicio</a>
-      <a href="/destinos">Destinos</a>
-      <a href="/contacto">Contacto</a>
-    </div>
-  </div>
+    <nav aria-label="principal">
+    <ul role="list">
+      <li aria-current="page">Inicio</li>
+      <li><a href="/destinos">Destinos</a></li>
+      <li><a href="/contacto">Contacto</a></li>
+    </ul>
+    </nav>
+  </header>
 
-  <div class="contenido-principal">
-    <div class="entrada">
-      <h3>Mi viaje a Galicia</h3>
+  <main>
+    <article>
+      <h2>Mi viaje a Galicia</h2>
       <p>Santiago de Compostela es una ciudad increíble.</p>
-      <h2>Lugares visitados</h2>
-      <div>
-        <div>Catedral de Santiago</div>
-        <div>Parque de la Alameda</div>
-        <div>Mercado de Abastos</div>
-      </div>
-    </div>
-  </div>
+      <h3>Lugares visitados</h3>
+      <ul>
+        <li>Catedral de Santiago</li>
+        <li>Parque de la Alameda</li>
+        <li>Mercado de Abastos</li>
+      </ul>
+    </article>
+  </main>
 </body>
 </html>
