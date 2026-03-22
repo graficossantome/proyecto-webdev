@@ -1,27 +1,26 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    <table>
-        <caption>Datos</caption>
-        <thead>
-            <tr>
-                <th scope="col">Nombre</th>
-                <th scope="col">Email</th>
-                <th scope="col">Teléfono</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">Ana García</th>
-                <td>ana@mail.com</td>
-                <td>612345678</td>
-            </tr>
-        </tbody>
-    </table>
+    <picture>
+    <source srcset="galeria/foto.webp" type="image/webp">
+    <source srcset="galeria/foto.avif" type="image/avif">
+    <img
+    src="/foto.jpg"
+    alt="alt de la fotunga"
+    width="800"
+    height="600"
+    loading="lazy"
+    >
+    </picture>
+
+    <figure>
+    <img src="galeria/retrato.jpg" alt="retrato de pintura" loading="lazy">
+    <figcaption>Retrato del autor en su estudio.</figcaption>
+    </figure>
 </body>
 </html>
