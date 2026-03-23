@@ -1,44 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Media.html</title>
+  <title>Mi Blog de Viajes</title>
 </head>
 <body>
+  <div class="navegacion">
+    <ul>
+      <li><a href="/inicio">Inicio</a></li>
+      <li><a href="/destinos">Destinos</a></li>
+      <li><a href="/contacto">Contacto</a></li>
+    </ul>
+  </div>
 
-    <section>
-        <h2>Video</h2>
-    <video controls poster="poster.jpg" width="800" height="600">
-    <source src="video.webm" type="video/webm">
-    <source src="video.mp4" type="video/mp4">
-
-    <track
-    label="spanish"
-    kind="subtitles"
-    default
-    srclang="es"
-    src="subs-es.vtt">
-
-    <track
-    label="english"
-    kind="subtitles"
-    srclang="en-GB"
-    src="subs-eng.vtt"
-    >
-    <p>Tu navegador no soporta vídeo. <a href="video.mp4">Descarga el vídeo</a>.</p>
-    </video>
-    </section>
-
-    <section>
-        <h2>Audio</h2>
-    <audio controls>
-    <source src="audio.ogg" type="audio/ogg">
-    <source src="audio.mp3" type="audio/mpeg">
-
-    <p>Si no puedes escucharlo, <a href="/audio.mp3">descarga el audio aquí</a></p>
-    </audio>
-    </section>
-
+  <main>
+    <div class="post">
+      <div class="titulo">Santiago de Compostela: guía completa</div>
+      <img src="santiago.jpg">
+      <p>Descubre los secretos de la ciudad del Apóstol. 
+         Visita la <a href="https://catedraldesantiago.es" target="_blank">Catedral</a> 
+         y pasea por la Alameda.</p>
+      <p>Publicado el <time>15 de marzo de 2026</time></p>
+    </div>
+  </main>
 </body>
 </html>
