@@ -1,156 +1,140 @@
 <!DOCTYPE html>
-<html lang="es-ES">
+<html>
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SurfGalicia - Escuela de Surf en la Costa da Morte</title>
-  <meta name="description" content="Aprende surf en las mejores playas de Galicia. Cursos para todos los niveles en la Costa da Morte.">
+  <title>Librería Follas Novas - Santiago de Compostela</title>
 </head>
 <body>
 
-  <header>
-    <h1>SurfGalicia</h1>
-    <p>Escuela de surf desde 2015</p>
-    <nav aria-label="principal">
-      <ul role="list">
-        <li><a href="#cursos">Cursos</a></li>
-        <li><a href="#horarios">Horarios</a></li>
-        <li><a href="#galeria">Galería</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div id="cabecera">
+    <h1>Librería Follas Novas</h1>
+    <p>Libros, cultura e comunidade desde 1958</p>
+    <div id="navegacion">
+      <a href="#novedades">Novedades</a>
+      <a href="#eventos">Eventos</a>
+      <a href="#club">Club de lectura</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </div>
 
   <main>
 
-    <section id="cursos">
-      <h2>Nuestros cursos</h2>
-      <p>Ofrecemos cursos adaptados a todos los niveles.</p>
+    <section id="novedades">
+      <h2>Novedades de marzo</h2>
+      <p>Nuestra selección de los libros más destacados de este mes.</p>
 
-      <article>
-        <h3>Curso Iniciación</h3>
-        <p>Perfecto si nunca has surfeado. Aprenderás las bases: remada, 
-           puesta en pie y lectura de olas.</p>
-        <p>Duración: 2 horas | Precio: 45€</p>
-      </article>
+      <div class="libro">
+        <img src="libro1.jpg" alt="">
+        <h4>O último día de Terranova</h4>
+        <p>de Manuel Rivas</p>
+        <p>Precio: 19,90€</p>
+      </div>
 
-      <article>
-        <h3>Curso Intermedio</h3>
-        <p>Para quienes ya dominan la puesta en pie. Trabajaremos giros 
-           básicos y selección de olas.</p>
-        <p>Duración: 2 horas | Precio: 50€</p>
-      </article>
+      <div class="libro">
+        <img src="libro2.jpg">
+        <h4>Cementerio de pianos</h4>
+        <p>de José Luís Peixoto</p>
+        <p>Precio: 18,50€</p>
+      </div>
 
-      <article>
-        <h3>Curso Avanzado</h3>
-        <p>Maniobras avanzadas, tubos y surf en olas grandes. Solo para 
-           surfistas con experiencia demostrable.</p>
-        <p>Duración: 3 horas | Precio: 65€</p>
-      </article>
+      <div class="libro">
+        <img src="libro3.jpg" alt="Portada del libro Los detectives salvajes">
+        <h4>Los detectives salvajes</h4>
+        <p>de Roberto Bolaño</p>
+        <p>Precio: 22,00€</p>
+      </div>
     </section>
 
-    <section id="horarios">
-      <h2>Horarios de verano 2026</h2>
+    <section id="eventos">
+      <h2>Próximos eventos</h2>
+
       <table>
-        <thead>
         <tr>
-          <th scope="col">Días</th>
-          <th scope="col">Mañana</th>
-          <th scope="col">Tarde</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <th scope="row">Lunes a Viernes</th>
-          <td>9:00 - 11:00</td>
-          <td>17:00 - 19:00</td>
+          <td>Fecha</td>
+          <td>Evento</td>
+          <td>Hora</td>
+          <td>Plazas</td>
         </tr>
         <tr>
-          <th scope="row">Sábados</th>
-          <td>10:00 - 12:00</td>
-          <td>—</td>
+          <td><time>28 de marzo</time></td>
+          <td>Presentación: <cite>O último día de Terranova</cite></td>
+          <td>19:00</td>
+          <td>30</td>
         </tr>
         <tr>
-          <td>Domingos</td>
-          <td>10:00 - 12:00</td>
-          <td>—</td>
+          <td><time>4 de abril</time></td>
+          <td>Taller de escritura creativa</td>
+          <td>17:30</td>
+          <td>15</td>
         </tr>
-        </tbody>
+        <tr>
+          <td><time>12 de abril</time></td>
+          <td>Contacontos infantil</td>
+          <td>11:00</td>
+          <td>20</td>
+        </tr>
       </table>
     </section>
 
-    <section id="galeria">
-      <h2>Galería</h2>
-      <p>Algunas imágenes de nuestras clases y las playas donde surfeamos.</p>
+    <section id="club">
+      <h2>Club de lectura</h2>
+      <p>Cada primer jueves de mes nos reunimos para compartir lecturas. 
+         Este mes leemos <cite>Cementerio de pianos</cite> de José Luís Peixoto.</p>
 
-      <figure>
-        <img src="clase-iniciacion.jpg" alt="niños en clase de surf">
-        <figcaption>Clase de iniciación en Praia de Lariño</figcaption>
-      </figure>
+      <h2>Escucha nuestro podcast</h2>
+      <p>Cada semana comentamos un libro en nuestro podcast.</p>
+      <audio controls>
+        <source src="podcast-ep23.mp3" type="audio/mpeg">
+      </audio>
 
-      <figure>
-        <img src="atardecer-surf.jpg" alt="surf al atardecer">
-        <figcaption>Surfeando al atardecer en Carnota</figcaption>
-      </figure>
-
-      <video
-      src="resumen-verano.mp4"
-      poster="poster-verano.jpg"
-      controls>
-       <p>Tu navegador no soporta vídeo HTML5. 
-     Puedes <a href="videos/demo.mp4">descargar el vídeo</a> 
-     o <a href="https://youtube.com/watch?v=xyz">verlo en YouTube</a>.</p></video>
+      <h2>Mira el resumen del último encuentro</h2>
+      <video poster="club-marzo.jpg">
+        <source src="club-marzo.mp4" type="video/mp4">
+        Tu navegador no soporta vídeo HTML5.
+      </video>
     </section>
 
     <section id="contacto">
-      <h2>Reserva tu clase</h2>
+      <h2>Hazte socio del club</h2>
 
-      <form action="/reservar" method="post">
-        <label for="nombre">Nombre completo</label>
+      <form action="/registro-club" method="GET">
+        <label for="nombre">Nombre</label>
         <input id="nombre" type="text" name="nombre" required>
 
-        <label for="email">Correo electrónico</label>
+        <label for="email">Email</label>
         <input id="email" type="email" name="email" required>
 
-        <label for="telefono">Teléfono</label>
-        <input id="telefono" type="tel" name="telefono">
-
-        <label for="curso">Curso que te interesa</label>
-        <select name="curso">
-          <option value="iniciacion">Iniciación</option>
-          <option value="intermedio">Intermedio</option>
-          <option value="avanzado">Avanzado</option>
+        <label>Género literario favorito</label>
+        <select name="genero">
+          <option value="narrativa">Narrativa</option>
+          <option value="poesia">Poesía</option>
+          <option value="ensayo">Ensayo</option>
+          <option value="comic">Cómic / Novela gráfica</option>
         </select>
 
-        <textarea name="texto" id="texto" placeholder="¿Algo que debamos saber?" cols="1" rows="5"></textarea>
-        
-        <button type="submit">Enviar reserva</button>
+        <label for="comentarios">¿Por qué quieres unirte?</label>
+        <input id="comentarios" type="text" name="comentarios">
+
+        <button type="submit">Registrarse</button>
       </form>
 
       <aside>
-        <h3>Encuéntranos</h3>
-        <ul>
-            <li>Praia de Lariño, Carnota (A Coruña)</li>
-            <li>Teléfono: <a href="tel:+34600000000">600 000 000</a></li>
-            <li>Síguenos en 
-            <a href="https://instagram.com/surfgalicia" target="_blank" rel="noopener noreferrer">Instagram</a> y 
-            <a href="https://youtube.com/surfgalicia" target="_blank" rel="noopener noreferrer">YouTube</a>
-            </li>
-        </ul>
+        <h3>Visítanos</h3>
+        <p>Rúa do Franco, 12 — Santiago de Compostela</p>
+        <p>Tel: <a href="tel:+34981555000">981 555 000</a></p>
+        <p>
+          <a href="https://instagram.com/follasnovas" target="_blank">Instagram</a> | 
+          <a href="https://facebook.com/follasnovas" target="_blank">Facebook</a>
+        </p>
       </aside>
     </section>
 
   </main>
 
-  <footer>
-    <p>© 2026 SurfGalicia. Todos los derechos reservados.</p>
-    <nav aria-label="legal">
-        <ul role="list">
-            <li><a href="/privacidad">Política de privacidad</a></li>
-            <li><a href="/aviso-legal">Aviso legal</a></li>
-        </ul>
-    </nav>
-  </footer>
+  <div class="pie">
+    <p>© 2026 Librería Follas Novas</p>
+    <p><a href="/privacidad">Privacidad</a> | <a href="/cookies">Cookies</a></p>
+  </div>
 
 </body>
 </html>
