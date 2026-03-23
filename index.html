@@ -1,26 +1,156 @@
 <!DOCTYPE html>
-<html>
+<html lang="es-ES">
 <head>
-  <title>Mi Blog de Viajes</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SurfGalicia - Escuela de Surf en la Costa da Morte</title>
+  <meta name="description" content="Aprende surf en las mejores playas de Galicia. Cursos para todos los niveles en la Costa da Morte.">
 </head>
 <body>
-  <div class="navegacion">
-    <ul>
-      <li><a href="/inicio">Inicio</a></li>
-      <li><a href="/destinos">Destinos</a></li>
-      <li><a href="/contacto">Contacto</a></li>
-    </ul>
-  </div>
+
+  <header>
+    <h1>SurfGalicia</h1>
+    <p>Escuela de surf desde 2015</p>
+    <nav aria-label="principal">
+      <ul role="list">
+        <li><a href="#cursos">Cursos</a></li>
+        <li><a href="#horarios">Horarios</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <main>
-    <div class="post">
-      <div class="titulo">Santiago de Compostela: guía completa</div>
-      <img src="santiago.jpg">
-      <p>Descubre los secretos de la ciudad del Apóstol. 
-         Visita la <a href="https://catedraldesantiago.es" target="_blank">Catedral</a> 
-         y pasea por la Alameda.</p>
-      <p>Publicado el <time>15 de marzo de 2026</time></p>
-    </div>
+
+    <section id="cursos">
+      <h2>Nuestros cursos</h2>
+      <p>Ofrecemos cursos adaptados a todos los niveles.</p>
+
+      <article>
+        <h3>Curso Iniciación</h3>
+        <p>Perfecto si nunca has surfeado. Aprenderás las bases: remada, 
+           puesta en pie y lectura de olas.</p>
+        <p>Duración: 2 horas | Precio: 45€</p>
+      </article>
+
+      <article>
+        <h3>Curso Intermedio</h3>
+        <p>Para quienes ya dominan la puesta en pie. Trabajaremos giros 
+           básicos y selección de olas.</p>
+        <p>Duración: 2 horas | Precio: 50€</p>
+      </article>
+
+      <article>
+        <h3>Curso Avanzado</h3>
+        <p>Maniobras avanzadas, tubos y surf en olas grandes. Solo para 
+           surfistas con experiencia demostrable.</p>
+        <p>Duración: 3 horas | Precio: 65€</p>
+      </article>
+    </section>
+
+    <section id="horarios">
+      <h2>Horarios de verano 2026</h2>
+      <table>
+        <thead>
+        <tr>
+          <th scope="col">Días</th>
+          <th scope="col">Mañana</th>
+          <th scope="col">Tarde</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <th scope="row">Lunes a Viernes</th>
+          <td>9:00 - 11:00</td>
+          <td>17:00 - 19:00</td>
+        </tr>
+        <tr>
+          <th scope="row">Sábados</th>
+          <td>10:00 - 12:00</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td>Domingos</td>
+          <td>10:00 - 12:00</td>
+          <td>—</td>
+        </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="galeria">
+      <h2>Galería</h2>
+      <p>Algunas imágenes de nuestras clases y las playas donde surfeamos.</p>
+
+      <figure>
+        <img src="clase-iniciacion.jpg" alt="niños en clase de surf">
+        <figcaption>Clase de iniciación en Praia de Lariño</figcaption>
+      </figure>
+
+      <figure>
+        <img src="atardecer-surf.jpg" alt="surf al atardecer">
+        <figcaption>Surfeando al atardecer en Carnota</figcaption>
+      </figure>
+
+      <video
+      src="resumen-verano.mp4"
+      poster="poster-verano.jpg"
+      controls>
+       <p>Tu navegador no soporta vídeo HTML5. 
+     Puedes <a href="videos/demo.mp4">descargar el vídeo</a> 
+     o <a href="https://youtube.com/watch?v=xyz">verlo en YouTube</a>.</p></video>
+    </section>
+
+    <section id="contacto">
+      <h2>Reserva tu clase</h2>
+
+      <form action="/reservar" method="post">
+        <label for="nombre">Nombre completo</label>
+        <input id="nombre" type="text" name="nombre" required>
+
+        <label for="email">Correo electrónico</label>
+        <input id="email" type="email" name="email" required>
+
+        <label for="telefono">Teléfono</label>
+        <input id="telefono" type="tel" name="telefono">
+
+        <label for="curso">Curso que te interesa</label>
+        <select name="curso">
+          <option value="iniciacion">Iniciación</option>
+          <option value="intermedio">Intermedio</option>
+          <option value="avanzado">Avanzado</option>
+        </select>
+
+        <textarea name="texto" id="texto" placeholder="¿Algo que debamos saber?" cols="1" rows="5"></textarea>
+        
+        <button type="submit">Enviar reserva</button>
+      </form>
+
+      <aside>
+        <h3>Encuéntranos</h3>
+        <ul>
+            <li>Praia de Lariño, Carnota (A Coruña)</li>
+            <li>Teléfono: <a href="tel:+34600000000">600 000 000</a></li>
+            <li>Síguenos en 
+            <a href="https://instagram.com/surfgalicia" target="_blank" rel="noopener noreferrer">Instagram</a> y 
+            <a href="https://youtube.com/surfgalicia" target="_blank" rel="noopener noreferrer">YouTube</a>
+            </li>
+        </ul>
+      </aside>
+    </section>
+
   </main>
+
+  <footer>
+    <p>© 2026 SurfGalicia. Todos los derechos reservados.</p>
+    <nav aria-label="legal">
+        <ul role="list">
+            <li><a href="/privacidad">Política de privacidad</a></li>
+            <li><a href="/aviso-legal">Aviso legal</a></li>
+        </ul>
+    </nav>
+  </footer>
+
 </body>
 </html>
