@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="es-ES">
 <head>
   <meta charset="UTF-8">
   <title>Librería Follas Novas - Santiago de Compostela</title>
 </head>
 <body>
 
-  <div id="cabecera">
+  <header>
     <h1>Librería Follas Novas</h1>
     <p>Libros, cultura e comunidade desde 1958</p>
-    <div id="navegacion">
-      <a href="#novedades">Novedades</a>
-      <a href="#eventos">Eventos</a>
-      <a href="#club">Club de lectura</a>
-      <a href="#contacto">Contacto</a>
-    </div>
-  </div>
+    <nav aria-label="principal">
+      <ul role="list">
+        <li><a href="#novedades">Novedades</a></li>
+        <li><a href="#eventos">Eventos</a></li>
+        <li><a href="#club">Club de lectura</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <main>
 
@@ -23,56 +25,61 @@
       <h2>Novedades de marzo</h2>
       <p>Nuestra selección de los libros más destacados de este mes.</p>
 
-      <div class="libro">
-        <img src="libro1.jpg" alt="">
-        <h4>O último día de Terranova</h4>
+      <article>
+        <img src="libro1.jpg" alt="portada del libro o último día de terranova">
+        <h3>O último día de Terranova</h3>
         <p>de Manuel Rivas</p>
         <p>Precio: 19,90€</p>
-      </div>
+      </article>
 
-      <div class="libro">
-        <img src="libro2.jpg">
-        <h4>Cementerio de pianos</h4>
+      <article>
+        <img src="libro2.jpg" alt="portada del libro o cementerio de pianos">
+        <h3>Cementerio de pianos</h3>
         <p>de José Luís Peixoto</p>
         <p>Precio: 18,50€</p>
-      </div>
+      </article>
 
-      <div class="libro">
+      <article>
         <img src="libro3.jpg" alt="Portada del libro Los detectives salvajes">
-        <h4>Los detectives salvajes</h4>
+        <h3>Los detectives salvajes</h3>
         <p>de Roberto Bolaño</p>
         <p>Precio: 22,00€</p>
-      </div>
+      </article>
     </section>
 
     <section id="eventos">
       <h2>Próximos eventos</h2>
 
       <table>
+        <caption>Toda la información que quieres sobre nuestros eventos</caption>
+        <thead>
         <tr>
-          <td>Fecha</td>
-          <td>Evento</td>
-          <td>Hora</td>
-          <td>Plazas</td>
+          <th scope="col">Fecha</th>
+          <th scope="col">Evento</th>
+          <th scope="col">Hora</th>
+          <th scope="col">Plazas</th>
         </tr>
+        </thead>
+        <tbody>
         <tr>
-          <td><time>28 de marzo</time></td>
-          <td>Presentación: <cite>O último día de Terranova</cite></td>
+          <td><time datetime="2026-03-28">28 de marzo</time></td>
+          <th scope="row">Presentación: <cite>O último día de Terranova</cite></th>
           <td>19:00</td>
           <td>30</td>
         </tr>
         <tr>
-          <td><time>4 de abril</time></td>
-          <td>Taller de escritura creativa</td>
+          <td><time datetime="2026-04-03">3 de abril</time></td>
+          <th scope="row">Taller de escritura creativa</th>
           <td>17:30</td>
           <td>15</td>
         </tr>
         <tr>
-          <td><time>12 de abril</time></td>
-          <td>Contacontos infantil</td>
+          <td><time datetime="2026-04-12">12 de abril</time></td>
+          <th scope="row">Contacontos infantil</th>
           <td>11:00</td>
           <td>20</td>
         </tr>
+        </tbody>
       </table>
     </section>
 
@@ -81,60 +88,67 @@
       <p>Cada primer jueves de mes nos reunimos para compartir lecturas. 
          Este mes leemos <cite>Cementerio de pianos</cite> de José Luís Peixoto.</p>
 
-      <h2>Escucha nuestro podcast</h2>
+      <h3>Escucha nuestro podcast</h3>
       <p>Cada semana comentamos un libro en nuestro podcast.</p>
       <audio controls>
         <source src="podcast-ep23.mp3" type="audio/mpeg">
+        <p>Tu navegador no soporta audio HTML5. <a href="www.soundcloud.com/xxxxx">Escucha el capítulo</a></p>
       </audio>
 
-      <h2>Mira el resumen del último encuentro</h2>
-      <video poster="club-marzo.jpg">
-        <source src="club-marzo.mp4" type="video/mp4">
-        Tu navegador no soporta vídeo HTML5.
+      <h3>Mira el resumen del último encuentro</h3>
+      <video controls poster="club-marzo.jpg">
+        <source src="club-marzo.m4" type="video/mp4">
+        <p>Tu navegador no soporta vídeo HTML5. <a href="www.youtube.com/xxxxx">Ve el capítulo</a></p>
       </video>
     </section>
 
     <section id="contacto">
       <h2>Hazte socio del club</h2>
 
-      <form action="/registro-club" method="GET">
+      <form action="/registro-club" method="post">
         <label for="nombre">Nombre</label>
         <input id="nombre" type="text" name="nombre" required>
 
         <label for="email">Email</label>
         <input id="email" type="email" name="email" required>
 
-        <label>Género literario favorito</label>
-        <select name="genero">
+        <label for="genero">Género literario favorito</label>
+        <select name="genero" id="genero">
           <option value="narrativa">Narrativa</option>
           <option value="poesia">Poesía</option>
           <option value="ensayo">Ensayo</option>
           <option value="comic">Cómic / Novela gráfica</option>
         </select>
 
-        <label for="comentarios">¿Por qué quieres unirte?</label>
-        <input id="comentarios" type="text" name="comentarios">
+        <textarea name="razon" id="razon" placeholder="¿Por qué quieres unirte?" rows="4" cols="4"></textarea>
 
         <button type="submit">Registrarse</button>
       </form>
 
       <aside>
         <h3>Visítanos</h3>
-        <p>Rúa do Franco, 12 — Santiago de Compostela</p>
-        <p>Tel: <a href="tel:+34981555000">981 555 000</a></p>
-        <p>
-          <a href="https://instagram.com/follasnovas" target="_blank">Instagram</a> | 
-          <a href="https://facebook.com/follasnovas" target="_blank">Facebook</a>
-        </p>
+          <ul>
+            <li>Rúa do Franco, 12 — Santiago de Compostela</li>
+            <li>Tel: <a href="tel:+34981555000">981 555 000</a></li>
+            <li>
+              <a href="https://instagram.com/follasnovas" target="_blank">Instagram</a>
+              <a href="https://facebook.com/follasnovas" target="_blank">Facebook</a>
+            </li>
+          </ul>
       </aside>
     </section>
 
   </main>
 
-  <div class="pie">
+  <footer>
     <p>© 2026 Librería Follas Novas</p>
-    <p><a href="/privacidad">Privacidad</a> | <a href="/cookies">Cookies</a></p>
-  </div>
+    <nav aria-label="legal">
+      <ul role="list">
+        <li><a href="/privacidad">Privacidad</a></li>
+        <li><a href="/cookies">Cookies</a></li>
+      </ul>
+    </nav>
+  </footer>
 
 </body>
 </html>
