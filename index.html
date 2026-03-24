@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-ES">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
-  <meta name="description" content="">
+  <title>Cofradía de Pescadores de Fisterra</title>
+  <meta name="description" content="Aquí tendríamos que incluir la descripción SEO">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
@@ -74,35 +74,28 @@
          <a href="https://www.portos.gal/taboas-de-mareas">Portos de Galicia</a>.</p>
 
       <div class="mareas-info">
-        <div class="marea">
-          <span class="label">Preamar (mañá)</span>
-          <span class="dato">06:42 — 3,8 m</span>
-        </div>
-        <div class="marea">
-          <span class="label">Baixamar</span>
-          <span class="dato">12:58 — 0,9 m</span>
-        </div>
-        <div class="marea">
-          <span class="label">Preamar (tarde)</span>
-          <span class="dato">19:10 — 3,7 m</span>
-        </div>
-        <div class="marea">
-          <span class="label">Coeficiente</span>
-          <span class="dato">78</span>
-        </div>
+        <dl>
+          <dt>Preamar (mañá)</dt>
+          <dd>06:42 — 3,8 m</dd>
+          <dt>Baixamar</dt>
+          <dd>12:58 — 0,9 m</dd>
+          <dt>Preamar (tarde)</dt>
+          <dd>19:10 — 3,7 m</dd>
+          <dt>Coeficiente</dt>
+          <dd>78</dd>
+        </dl>
       </div>
     </section>
 
     <section id="avisos">
       <h2>Avisos da cofradía</h2>
 
-      <article>
+      <section id="percebe">
         <h3>Veda de percebe — Zona Costa da Morte norte</h3>
-        <p><time>20 de marzo de 2026</time></p>
+        <p><time datetime="2026-03-20">20 de marzo de 2026</time></p>
         <p>Comunícase que a partir do día 25 de marzo queda 
-           <b>prohibida a extracción de percebe</b> na zona norte 
+           <strong>prohibida a extracción de percebe</strong> na zona norte 
            da Costa da Morte ata novo aviso.</p>
-        <details>
           <p>A veda afecta ás seguintes zonas:</p>
           <ul>
             <li>De Cabo Vilán a Punta Roncudo</li>
@@ -110,12 +103,11 @@
           </ul>
           <p>Os percebeiros afectados deberán presentar a solicitude 
              de compensación antes do <time datetime="2026-04-15">15 de abril</time>.</p>
-        </details>
-      </article>
+      </section>
 
-      <article>
+      <section id="asemblea">
         <h3>Asemblea xeral ordinaria</h3>
-        <p><time>18 de marzo de 2026</time></p>
+        <p><time datetime="2026-03-18">18 de marzo de 2026</time></p>
         <p>Convócase asemblea xeral ordinaria para o día 
            <time datetime="2026-04-02">2 de abril</time> ás 18:00 h 
            no salón de actos da cofradía.</p>
@@ -131,9 +123,100 @@
           </li>
           <li>Rogos e preguntas</li>
         </ol>
-      </article>
+      </section>
     </section>
 
     <section id="inscripcion">
       <h2>Solicitude de inscrición</h2>
       <p>Cubre este formulario para solicitar a inscrición na cofradía.</p>
+
+      <form action="/inscripcion" method="post">
+        <fieldset>
+          <legend>Datos persoais</legend>
+
+          <label for="nome">Nome completo</label>
+          <input id="nome" type="text" name="nome" required>
+
+          <label for="dni">DNI / NIE</label>
+          <input id="dni" type="text" name="dni" required 
+                 pattern="[0-9]{8}[A-Z]" title="Introduce tu DNI">
+
+          <label for="nacemento">Data de nacemento</label>
+          <input id="nacemento" type="date" name="nacemento" required>
+
+          <label for="telefono">Teléfono</label>
+          <input id="telefono" type="tel" name="telefono" required>
+
+          <label for="correo">Correo electrónico</label>
+          <input id="correo" type="email" name="correo" required>
+        </fieldset>
+
+        <fieldset>
+          <legend>Datos profesionais</legend>
+
+          <label for="embarcacion">Nome da embarcación</label>
+          <input id="embarcacion" type="text" name="embarcacion" required>
+
+          <label for="matricula">Matrícula</label>
+          <input id="matricula" type="text" name="matricula"
+                 placeholder="Ej: 3ª-VI-1-2345">
+
+          <label for="modalidade">Modalidade de pesca</label>
+          <select id="modalidade" name="modalidade" required>
+            <option value="">—- Selecciona -—</option>
+            <option value="arrastre">Arrastre</option>
+            <option value="cerco">Cerco</option>
+            <option value="palangre">Palangre</option>
+            <option value="marisqueo">Marisqueo a pé</option>
+            <option value="percebe">Percebe</option>
+          </select>
+
+          <fieldset>
+          <legend>Certificacións que posúe:</legend>
+            <input type="checkbox" name="cert" value="patron_costero"> Patrón costeiro<br>
+            <input type="checkbox" name="cert" value="patron_local"> Patrón local<br>
+            <input type="checkbox" name="cert" value="mergullador"> Mergullador profesional<br>
+            <input type="checkbox" name="cert" value="primeiros_auxilios"> Primeiros auxilios<br>
+          </fieldset>
+
+          <label for="experiencia">Anos de experiencia no mar</label>
+          <input id="experiencia" type="text" name="experiencia">
+          
+        </fieldset>
+
+        <fieldset>
+          <legend>Documentación</legend>
+
+          <label for="foto">Foto de carné</label>
+          <input id="foto" type="file" name="foto" accept="image/*" required>
+
+          <label for="titulo">Título profesional (PDF)</label>
+          <input id="titulo" type="file" name="titulo" accept=".pdf" required>
+        </fieldset>
+
+        <label for="notas">Observacións adicionais</label>
+        <textarea id="notas" name="notas" rows="4" placeholder="¿Tes algo máis que dicir?"></textarea>
+
+        <label>
+          <input type="checkbox" name="proteccion_datos" required>
+          Acepto a <a href="/privacidade" target="_blank" rel="noopener noreferrer">política de protección de datos</a>
+        </label>
+
+        <button type="submit">Enviar solicitude</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Cofradía de Pescadores de Fisterra</p>
+    <nav aria-label="legal">
+      <ul role="list">
+        <li><a href="/privacidade">Privacidade</a></li>
+        <li><a href="/aviso-legal">Aviso legal</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+</body>
+</html>
