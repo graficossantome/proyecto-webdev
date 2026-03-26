@@ -1,17 +1,27 @@
+/* 1. Selecciona TODOS los elementos de la página */
 *,
-*::before,
-*::after {
+::before,
+::after {
   box-sizing: border-box;
 }
 
-.precio {
-  padding: 10px;
-  border: 2px solid green;
+/* 2. Selecciona solo los elementos con clase "post" */
+.post {
+  padding: 20px;
+  border: 1px solid gray;
 }
 
-.tarjeta {
-  width: 300px;
-  padding: 20px;
-  border: 5px solid gray;
-  /* Quiero que la tarjeta mida exactamente 300px de ancho total */
+/* 3. Selecciona solo el <p> que es hijo directo e inmediatamente posterior al <h2> dentro de .post */
+.post > h2 + p {
+  font-weight: bold;
+}
+
+/* 4. Selecciona todos los enlaces cuya URL empieza por "https" */
+a[href^="https"] {
+  color: green;
+}
+
+/* 5. Selecciona los enlaces cuando el usuario pasa el ratón por encima */
+a:hover {
+  text-decoration: underline;
 }
