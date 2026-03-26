@@ -1,0 +1,17 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.precio {
+  padding: 10px;
+  border: 2px solid green;
+}
+
+.tarjeta {
+  width: 300px;
+  padding: 20px;
+  border: 5px solid gray;
+  /* Quiero que la tarjeta mida exactamente 300px de ancho total */
+}
